@@ -82,8 +82,8 @@ export class NlqComponent implements OnInit {
     this.eventDisplay.init(configuration);
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
-    this.eventDisplay.loadGLTFGeometry('assets/detectors/fccee_nlq.gltf',
-                                       'NLQ',
+    this.eventDisplay.loadGLTFGeometry('https://fccsw.web.cern.ch/fccsw/detectors/fccee_nlq.gltf',
+                                       undefined,
                                        undefined,
                                        1,
                                        true);

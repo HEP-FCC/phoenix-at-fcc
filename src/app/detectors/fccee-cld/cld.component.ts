@@ -83,7 +83,7 @@ export class CldComponent implements OnInit {
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
     this.eventDisplay.loadGLTFGeometry('https://fccsw.web.cern.ch/fccsw/detectors/fccee_cld.gltf',
-                                       'CLD',
+                                       undefined,
                                        undefined,
                                        1,
                                        true);

@@ -82,8 +82,8 @@ export class FcchhBaselineComponent implements OnInit {
     this.eventDisplay.init(configuration);
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
-    this.eventDisplay.loadGLTFGeometry('assets/detectors/fcchh_baseline.gltf',
-                                       'FCChh baseline',
+    this.eventDisplay.loadGLTFGeometry('https://fccsw.web.cern.ch/fccsw/detectors/fcchh_baseline.gltf',
+                                       undefined,
                                        undefined,
                                        1,
                                        true);

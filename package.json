@@ -5,6 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --base-href https://fccsw.web.cern.ch/fccsw/phoenix/",
+    "build:dev": "ng build --base-href https://fccsw.web.cern.ch/fccsw/phoenix-dev/",
+    "deploy:prod": "rsync -avh --delete dist/phoenix-at-fcc/ lxplus:/eos/project-f/fccsw-web/www/phoenix/",
+    "deploy:dev": "rsync -avh --delete dist/phoenix-at-fcc/ lxplus:/eos/project-f/fccsw-web/www/phoenix-dev/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

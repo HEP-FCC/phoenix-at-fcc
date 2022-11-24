@@ -76,7 +76,11 @@ export class IdeaComponent implements OnInit {
     this.eventDisplay.init(configuration);
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
-    this.eventDisplay.loadGLTFGeometry('assets/detectors/fccee_idea_calo.gltf', 'IDEA');
+    this.eventDisplay.loadGLTFGeometry('https://fccsw.web.cern.ch/fccsw/detectors/fccee_idea.gltf',
+                                       undefined,
+                                       undefined,
+                                       1,
+                                       true);
     this.eventDisplay
         .getLoadingManager()
         .addProgressListener((progress) => (this.loadingProgress = progress));
