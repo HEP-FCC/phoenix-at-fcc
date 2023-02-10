@@ -10,6 +10,21 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Install
+
+To install the application without changing the `yarn.lock` file run:
+```bash
+yarn install --frozen-lockfile
+```
+
+## Development version of Phoenix
+
+In order to have access to the latest development version of phoenix link two
+sub projects:
+```
+phoenix-event-display  phoenix-ui-components
+```
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
