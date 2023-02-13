@@ -8117,9 +8117,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"phoenix-event-display@portal:/home/jsmiesko/Work/FCC/phoenix/packages/phoenix-event-display::locator=phoenix-at-fcc%40workspace%3A.":
+"phoenix-event-display@portal:../phoenix/packages/phoenix-event-display::locator=phoenix-at-fcc%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "phoenix-event-display@portal:/home/jsmiesko/Work/FCC/phoenix/packages/phoenix-event-display::locator=phoenix-at-fcc%40workspace%3A."
+  resolution: "phoenix-event-display@portal:../phoenix/packages/phoenix-event-display::locator=phoenix-at-fcc%40workspace%3A."
   dependencies:
     "@babel/core": ^7.20.12
     "@tweenjs/tween.js": ^18.6.4
@@ -8132,9 +8132,9 @@ __metadata:
   languageName: node
   linkType: soft
 
-"phoenix-ui-components@portal:/home/jsmiesko/Work/FCC/phoenix/packages/phoenix-ng/projects/phoenix-ui-components::locator=phoenix-at-fcc%40workspace%3A.":
+"phoenix-ui-components@portal:../phoenix/packages/phoenix-ng/projects/phoenix-ui-components::locator=phoenix-at-fcc%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "phoenix-ui-components@portal:/home/jsmiesko/Work/FCC/phoenix/packages/phoenix-ng/projects/phoenix-ui-components::locator=phoenix-at-fcc%40workspace%3A."
+  resolution: "phoenix-ui-components@portal:../phoenix/packages/phoenix-ng/projects/phoenix-ui-components::locator=phoenix-at-fcc%40workspace%3A."
   dependencies:
     "@angular/animations": ^15.1.2
     "@angular/cdk": ^15.1.2

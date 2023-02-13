@@ -19,11 +19,20 @@ yarn install --frozen-lockfile
 
 ## Development version of Phoenix
 
-In order to have access to the latest development version of phoenix link two
-sub projects:
+In order to have access to the latest development version of phoenix two links
+to sub-packages are created:
+```sh
+phoenix-ui-components
+phoenix-event-display
 ```
-phoenix-event-display  phoenix-ui-components
+
+or more specifically
+
+```sh
+yarn link -r ../phoenix/packages/phoenix-ng/projects/phoenix-ui-components
+yarn link -r ../phoenix/packages/phoenix-event-display
 ```
+
 
 ## Build
 

@@ -45,7 +45,7 @@
   },
   "packageManager": "yarn@3.4.1",
   "resolutions": {
-    "phoenix-ui-components": "portal:/home/jsmiesko/Work/FCC/phoenix/packages/phoenix-ng/projects/phoenix-ui-components",
-    "phoenix-event-display": "portal:/home/jsmiesko/Work/FCC/phoenix/packages/phoenix-event-display"
+    "phoenix-ui-components": "portal:../phoenix/packages/phoenix-ng/projects/phoenix-ui-components",
+    "phoenix-event-display": "portal:../phoenix/packages/phoenix-event-display"
   }
 }
