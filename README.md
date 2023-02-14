@@ -10,12 +10,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+
 ## Install
 
-To install the application without changing the `yarn.lock` file run:
+To install all dependencies of the application run:
 ```bash
-yarn install --frozen-lockfile
+yarn install
 ```
+
 
 ## Development version of Phoenix
 
