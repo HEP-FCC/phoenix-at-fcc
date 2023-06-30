@@ -41,18 +41,18 @@ yarn link -r ../phoenix/packages/phoenix-event-display
 ```
 
 
-## Development model
+## Production vs. development version
 
-The repository employs following development model:
-* `main` branch holds the latest released version available from the main page
-    of [FCCSW website][fccsw] ([direct link][produrl]).
-* `devel` holds the latest version available from [here][develurl].
+* Production version is available from the main page of [FCCSW website][fccsw]
+    ([direct link][produrl]) and corresponds to the latest tagged version.
+* The `main` branch holds the latest development version available from
+    [here][develurl].
 
 
 ## Deploying to the FCCSW website
 
-Production version should be build and deployed from `main` branch and
-development version from `devel` branch with the help of following two commands
+Production version should be build and deployed from latest tagged version and
+development version from `main` branch with the help of following two commands
 ```sh
 yarn build:prod
 yarn deploy:prod
