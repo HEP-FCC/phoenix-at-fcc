@@ -46,7 +46,7 @@ yarn link -r ../phoenix/packages/phoenix-event-display
 The repository employs following development model:
 * `main` branch holds the latest released version available from the main page
     of [FCCSW website][fccsw] ([direct link][produrl]).
-* `devel` holds the latest version available from [here][develurl]
+* `devel` holds the latest version available from [here][develurl].
 
 
 ## Deploying to the FCCSW website
