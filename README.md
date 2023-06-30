@@ -1,53 +1,68 @@
 # Phoenix@FCC
 
-This repository hold the [Phoenix](https://hepsoftwarefoundation.org/phoenix/) based application used to visualize event data at FCC.
+This repository holds the [Phoenix](https://hepsoftwarefoundation.org/phoenix/)
+based application used to visualize event data at FCC.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-
-## Install
-
-To install all dependencies of the application run:
-```bash
+To install the application run
+```sh
 yarn install
 ```
+
+>
+> Note: Make sure that you use Yarn2
+>
+
+
+## Running locally
+
+After installation, to serve the application locally run
+```sh
+yarn start
+````
+Navigate to `http://localhost:4200/`. The application will automatically
+reload if you change any of the source files.
 
 
 ## Development version of Phoenix
 
 In order to have access to the latest development version of phoenix two links
-to sub-packages are created:
-```sh
+to sub-packages need to be created:
+```
 phoenix-ui-components
 phoenix-event-display
 ```
-
-or more specifically
-
+or more specifically, run following two commands from the main directory of this
+application
 ```sh
 yarn link -r ../phoenix/packages/phoenix-ng/projects/phoenix-ui-components
 yarn link -r ../phoenix/packages/phoenix-event-display
 ```
 
 
-## Build
+## Development model
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The repository employs following development model:
+* `main` branch holds the latest released version available from the main page
+    of [FCCSW website][fccsw] ([direct link][produrl]).
+* `devel` holds the latest version available from [here][develurl].
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deploying to the FCCSW website
 
-## Running end-to-end tests
+Production version should be build and deployed from `main` branch and
+development version from `devel` branch with the help of following two commands
+```sh
+yarn build:prod
+yarn deploy:prod
+```
+or
+```sh
+yarn build:dev
+yarn deploy:dev
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[fccsw]: https://fccsw.web.cern.ch/fccsw/
+[produrl]: https://fccsw.web.cern.ch/fccsw/phoenix/
+[develurl]: https://fccsw.web.cern.ch/fccsw/phoenix-dev/
