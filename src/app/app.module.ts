@@ -15,7 +15,7 @@ import { PlaygroundComponent } from './playground/playground.component';
 // FCC-ee
 import { CldComponent } from './detectors/fccee-cld/cld.component';
 import { IdeaComponent } from './detectors/fccee-idea/idea.component';
-import { NlqComponent } from './detectors/fccee-nlq/nlq.component';
+import { AllegroComponent } from './detectors/fccee-allegro/allegro.component';
 // FCC-hh
 import { FcchhBaselineComponent } from './detectors/fcchh-baseline/fcchh-baseline.component';
 
@@ -24,7 +24,7 @@ let routes: Routes = [
   { path: 'playground', component: PlaygroundComponent },
   { path: 'fccee-cld', component: CldComponent },
   { path: 'fccee-idea', component: IdeaComponent },
-  { path: 'fccee-nlq', component: NlqComponent },
+  { path: 'fccee-allegro', component: AllegroComponent },
   { path: 'fcchh-baseline', component: FcchhBaselineComponent }
 ]
 
@@ -33,7 +33,7 @@ let routes: Routes = [
     AppComponent,
     CldComponent,
     IdeaComponent,
-    NlqComponent,
+    AllegroComponent,
     FcchhBaselineComponent,
     MainComponent,
     PlaygroundComponent
