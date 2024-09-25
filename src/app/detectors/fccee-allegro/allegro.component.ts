@@ -9,6 +9,7 @@ import { Configuration,
          PresetView,
          ClippingSetting,
          PhoenixMenuNode } from 'phoenix-event-display';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-allegro',
@@ -29,9 +30,18 @@ export class AllegroComponent implements OnInit {
     EventDataFormat.EDM4HEPJSON,
   ];
 
-  constructor(private eventDisplay: EventDisplayService) {};
+  constructor(private eventDisplay: EventDisplayService,
+              private route: ActivatedRoute) {};
 
   ngOnInit(): void {
+    let optionVersion;
+    this.route.params.subscribe(params => {
+      optionVersion = params['option-version'];
+    });
+    if (optionVersion === undefined) {
+      optionVersion = 'o1_v03';
+    }
+
     // Create the event display configuration
     const configuration: Configuration = {
       eventDataLoader: new PhoenixLoader(),
@@ -84,7 +94,8 @@ export class AllegroComponent implements OnInit {
 
     // Load latest detector geometry from the FCCSW wesite
     this.eventDisplay.loadGLTFGeometry(
-      'https://fccsw.web.cern.ch/fccsw/detectors/ALLEGRO_o1_v03.gltf',
+      // 'assets/detectors/ALLEGRO_' + optionVersion + '.gltf',
+      'https://fccsw.web.cern.ch/fccsw/detectors/ALLEGRO_' + optionVersion + '.gltf',
       undefined,
       undefined,
       1,

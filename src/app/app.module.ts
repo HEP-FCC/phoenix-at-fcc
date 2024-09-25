@@ -22,9 +22,9 @@ import { FcchhBaselineComponent } from './detectors/fcchh-baseline/fcchh-baselin
 let routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'playground', component: PlaygroundComponent },
-  { path: 'fccee-cld', component: CldComponent },
-  { path: 'fccee-idea', component: IdeaComponent },
-  { path: 'fccee-allegro', component: AllegroComponent },
+  { path: 'fccee-cld/:option-version', component: CldComponent },
+  { path: 'fccee-idea/:option-version', component: IdeaComponent },
+  { path: 'fccee-allegro/:option-version', component: AllegroComponent },
   { path: 'fcchh-baseline', component: FcchhBaselineComponent }
 ]
 

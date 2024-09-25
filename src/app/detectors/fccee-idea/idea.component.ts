@@ -9,6 +9,7 @@ import { Configuration,
          PresetView,
          ClippingSetting,
          PhoenixMenuNode } from 'phoenix-event-display';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-idea',
@@ -29,9 +30,18 @@ export class IdeaComponent implements OnInit {
     EventDataFormat.EDM4HEPJSON,
   ];
 
-  constructor(private eventDisplay: EventDisplayService) {};
+  constructor(private eventDisplay: EventDisplayService,
+              private route: ActivatedRoute) {};
 
   ngOnInit(): void {
+    let optionVersion;
+    this.route.params.subscribe(params => {
+      optionVersion = params['option-version'];
+    });
+    if (optionVersion === undefined) {
+      optionVersion = 'o1_v03';
+    }
+
     // Create the event display configuration
     const configuration: Configuration = {
       eventDataLoader: new PhoenixLoader(),
@@ -75,12 +85,16 @@ export class IdeaComponent implements OnInit {
     // Initialize the event display
     this.eventDisplay.init(configuration);
 
-    // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
-    this.eventDisplay.loadGLTFGeometry('https://fccsw.web.cern.ch/fccsw/detectors/fccee_idea.gltf',
-                                       undefined,
-                                       undefined,
-                                       1,
-                                       true);
+    // Load detector geometry (assuming the file exists in the `src/assets`
+    // directory of the app)
+    this.eventDisplay.loadGLTFGeometry(
+      // 'assets/detectors/IDEA_' + optionVersion + '.gltf',
+      'https://fccsw.web.cern.ch/fccsw/detectors/IDEA_' + optionVersion + '.gltf',
+      undefined,
+      undefined,
+      1,
+      true
+    );
     this.eventDisplay
         .getLoadingManager()
         .addProgressListener((progress) => (this.loadingProgress = progress));
