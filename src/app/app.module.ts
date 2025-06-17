@@ -2,16 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
+import { PlaygroundComponent } from './playground/playground.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhoenixUIModule } from 'phoenix-ui-components';
 
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, type Routes } from '@angular/router';
 
-import { MainComponent } from './main/main.component';
-import { PlaygroundComponent } from './playground/playground.component';
 // FCC-ee
 import { CldComponent } from './detectors/fccee-cld/cld.component';
 import { IdeaComponent } from './detectors/fccee-idea/idea.component';
@@ -31,17 +30,16 @@ let routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    MainComponent,
     CldComponent,
     IdeaComponent,
     AllegroComponent,
     FcchhBaselineComponent,
-    MainComponent,
     PlaygroundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     PhoenixUIModule,
     RouterModule.forRoot(routes)

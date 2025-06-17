@@ -13,7 +13,8 @@ import { Configuration,
 @Component({
   selector: 'app-fcchh-baseline',
   templateUrl: './fcchh-baseline.component.html',
-  styleUrls: ['./fcchh-baseline.component.scss']
+  styleUrls: ['./fcchh-baseline.component.scss'],
+  standalone: false
 })
 export class FcchhBaselineComponent implements OnInit {
   events: any;
@@ -82,11 +83,14 @@ export class FcchhBaselineComponent implements OnInit {
     this.eventDisplay.init(configuration);
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
-    this.eventDisplay.loadGLTFGeometry('https://fccsw.web.cern.ch/fccsw/detectors/fcchh_baseline.gltf',
-                                       undefined,
-                                       undefined,
-                                       1,
-                                       true);
+    this.eventDisplay.loadGLTFGeometry(
+      // 'assets/detectors/fcchh_baseline.gltf',
+      'https://fccsw.web.cern.ch/fccsw/detectors/fcchh_baseline.gltf',
+      'FCC-hh',
+      undefined,
+      1,
+      true
+    );
 
     this.eventDisplay
         .getLoadingManager()

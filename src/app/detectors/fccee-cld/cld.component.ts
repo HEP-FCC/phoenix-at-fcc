@@ -14,7 +14,8 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-cld',
   templateUrl: './cld.component.html',
-  styleUrls: ['./cld.component.scss']
+  styleUrls: ['./cld.component.scss'],
+  standalone: false
 })
 export class CldComponent implements OnInit {
   events: any;
@@ -95,7 +96,7 @@ export class CldComponent implements OnInit {
     this.eventDisplay.loadGLTFGeometry(
       // 'assets/detectors/CLD_' + optionVersion + '.gltf',
       'https://fccsw.web.cern.ch/fccsw/detectors/CLD_' + optionVersion + '.gltf',
-      undefined,
+      'CLD',
       undefined,
       1,
       true);
