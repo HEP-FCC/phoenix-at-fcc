@@ -2,6 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "cli": {
+    "cache": {
+      "enabled": false
+    },
+    "analytics": false
+  },
   "projects": {
     "phoenix-at-fcc": {
       "projectType": "application",
@@ -70,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "phoenix-at-fcc:build:production"
+              "buildTarget": "phoenix-at-fcc:build:production"
             },
             "development": {
-              "browserTarget": "phoenix-at-fcc:build:development"
+              "buildTarget": "phoenix-at-fcc:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "phoenix-at-fcc:build"
+            "buildTarget": "phoenix-at-fcc:build"
           }
         },
         "test": {

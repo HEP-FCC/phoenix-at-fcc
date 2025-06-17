@@ -14,7 +14,8 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-idea',
   templateUrl: './idea.component.html',
-  styleUrls: ['./idea.component.scss']
+  styleUrls: ['./idea.component.scss'],
+  standalone: false
 })
 export class IdeaComponent implements OnInit {
   events: any;
@@ -90,7 +91,7 @@ export class IdeaComponent implements OnInit {
     this.eventDisplay.loadGLTFGeometry(
       // 'assets/detectors/IDEA_' + optionVersion + '.gltf',
       'https://fccsw.web.cern.ch/fccsw/detectors/IDEA_' + optionVersion + '.gltf',
-      undefined,
+      `IDEA ${optionVersion}`,
       undefined,
       1,
       true

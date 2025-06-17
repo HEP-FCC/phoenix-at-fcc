@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-playground',
   templateUrl: './playground.component.html',
-  styleUrls: ['./playground.component.scss']
+  styleUrls: ['./playground.component.scss'],
+  standalone: false
 })
 export class PlaygroundComponent implements OnInit {
   loaded = false;

@@ -14,7 +14,8 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-allegro',
   templateUrl: './allegro.component.html',
-  styleUrls: ['./allegro.component.scss']
+  styleUrls: ['./allegro.component.scss'],
+  standalone: false
 })
 export class AllegroComponent implements OnInit {
   events: any;
@@ -96,7 +97,7 @@ export class AllegroComponent implements OnInit {
     this.eventDisplay.loadGLTFGeometry(
       // 'assets/detectors/ALLEGRO_' + optionVersion + '.gltf',
       'https://fccsw.web.cern.ch/fccsw/detectors/ALLEGRO_' + optionVersion + '.gltf',
-      undefined,
+      'ALLEGRO',
       undefined,
       1,
       true
