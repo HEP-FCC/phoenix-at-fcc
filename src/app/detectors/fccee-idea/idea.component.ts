@@ -12,6 +12,7 @@ import {
   PhoenixMenuNode,
 } from 'phoenix-event-display';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-idea',
@@ -94,10 +95,7 @@ export class IdeaComponent implements OnInit {
     // Load detector geometry (assuming the file exists in the `src/assets`
     // directory of the app)
     this.eventDisplay.loadGLTFGeometry(
-      // 'assets/detectors/IDEA_' + optionVersion + '.gltf',
-      'https://fccsw.web.cern.ch/fccsw/detectors/IDEA_' +
-        optionVersion +
-        '.gltf',
+      environment.path + 'detectors/IDEA_' + optionVersion + '.gltf',
       `IDEA ${optionVersion}`,
       undefined,
       1,

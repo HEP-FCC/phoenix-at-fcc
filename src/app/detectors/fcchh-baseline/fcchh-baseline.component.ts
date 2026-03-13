@@ -11,6 +11,7 @@ import {
   ClippingSetting,
   PhoenixMenuNode,
 } from 'phoenix-event-display';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-fcchh-baseline',
@@ -87,8 +88,7 @@ export class FcchhBaselineComponent implements OnInit {
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
     this.eventDisplay.loadGLTFGeometry(
-      // 'assets/detectors/fcchh_baseline.gltf',
-      'https://fccsw.web.cern.ch/fccsw/detectors/fcchh_baseline.gltf',
+      environment.path + 'detectors/fcchh_baseline.gltf',
       'FCC-hh',
       undefined,
       1,
