@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { EventDisplayService } from 'phoenix-ui-components';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +9,7 @@ import { EventDisplayService } from 'phoenix-ui-components';
 })
 export class MainComponent implements AfterViewInit {
   year: number;
+  envPath = environment.path;
 
   constructor(private eventDisplay: EventDisplayService) {
     this.year = new Date().getFullYear();
