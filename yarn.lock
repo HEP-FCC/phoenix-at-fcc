@@ -7209,6 +7209,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-config-prettier@npm:^10.1.8":
+  version: 10.1.8
+  resolution: "eslint-config-prettier@npm:10.1.8"
+  peerDependencies:
+    eslint: ">=7.0.0"
+  bin:
+    eslint-config-prettier: bin/cli.js
+  checksum: 9140e19f78f0dbc888b160bb72b85f8043bada7b12a548faa56cea0ba74f8ef16653250ffd014d85d9a376a88c4941c96a3cdc9d39a07eb3def6967166635bd8
+  languageName: node
+  linkType: hard
+
 "eslint-scope@npm:5.1.1":
   version: 5.1.1
   resolution: "eslint-scope@npm:5.1.1"
@@ -10728,6 +10739,7 @@ __metadata:
     "@types/three": ^0.162.0
     angular-eslint: 19.8.1
     eslint: ^9.28.0
+    eslint-config-prettier: ^10.1.8
     jasmine-core: ~4.3.0
     jspdf: "*"
     karma: ~6.4.0
@@ -10737,6 +10749,7 @@ __metadata:
     karma-jasmine-html-reporter: ~2.0.0
     phoenix-event-display: ^3.0.5
     phoenix-ui-components: ^3.0.4
+    prettier: 3.8.1
     rxjs: ^7.8.1
     tslib: ^2.8.1
     typescript: ~5.5.4
@@ -11002,6 +11015,15 @@ __metadata:
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
   checksum: cd192ec0d0a8e4c6da3bb80e4f62afe336df3f76271ac6deb0e6a36187133b6073a19e9727a1ff108cd8b9982e4768850d413baa71214dd80c7979617dca827a
+  languageName: node
+  linkType: hard
+
+"prettier@npm:3.8.1":
+  version: 3.8.1
+  resolution: "prettier@npm:3.8.1"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 36fe4ecd95751aa17fea70b48afd5086e88002988238112fc1be30a5307af6983e1833be790b0cc1c54702b71f73b12bfec12c05166d7619e3151ab221654297
   languageName: node
   linkType: hard
 
