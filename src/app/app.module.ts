@@ -24,8 +24,8 @@ const routes: Routes = [
   { path: 'fccee-cld/:option-version', component: CldComponent },
   { path: 'fccee-idea/:option-version', component: IdeaComponent },
   { path: 'fccee-allegro/:option-version', component: AllegroComponent },
-  { path: 'fcchh-baseline', component: FcchhBaselineComponent }
-]
+  { path: 'fcchh-baseline', component: FcchhBaselineComponent },
+];
 
 @NgModule({
   declarations: [
@@ -35,14 +35,14 @@ const routes: Routes = [
     IdeaComponent,
     AllegroComponent,
     FcchhBaselineComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     PhoenixUIModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],

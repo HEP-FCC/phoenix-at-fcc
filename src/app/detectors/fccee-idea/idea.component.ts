@@ -1,27 +1,31 @@
-import { Component,
-         OnInit } from '@angular/core';
-import { EventDisplayService,
-         EventDataFormat,
-         EventDataImportOption } from 'phoenix-ui-components';
-import { Configuration,
-         PhoenixLoader,
-         PresetView,
-         ClippingSetting,
-         PhoenixMenuNode } from 'phoenix-event-display';
+import { Component, OnInit } from '@angular/core';
+import {
+  EventDisplayService,
+  EventDataFormat,
+  EventDataImportOption,
+} from 'phoenix-ui-components';
+import {
+  Configuration,
+  PhoenixLoader,
+  PresetView,
+  ClippingSetting,
+  PhoenixMenuNode,
+} from 'phoenix-event-display';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-idea',
   templateUrl: './idea.component.html',
   styleUrls: ['./idea.component.scss'],
-  
 })
 export class IdeaComponent implements OnInit {
   events: unknown;
 
   /** The root Phoenix menu node. */
-  phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode('Phoenix Menu',
-                                                         'phoenix-menu');
+  phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode(
+    'Phoenix Menu',
+    'phoenix-menu',
+  );
 
   loaded = false;
   loadingProgress = 0;
@@ -30,12 +34,14 @@ export class IdeaComponent implements OnInit {
     EventDataFormat.EDM4HEPJSON,
   ];
 
-  constructor(private eventDisplay: EventDisplayService,
-              private route: ActivatedRoute) {};
+  constructor(
+    private eventDisplay: EventDisplayService,
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit(): void {
     let optionVersion;
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       optionVersion = params['option-version'];
     });
     if (optionVersion === undefined) {
@@ -53,34 +59,34 @@ export class IdeaComponent implements OnInit {
           'perspective',
           ClippingSetting.On,
           340,
-          120
+          120,
         ),
         new PresetView(
           'Side View',
           [1200, 0, 0],
           [0, 0, 0],
           'right-cube',
-          ClippingSetting.Off
+          ClippingSetting.Off,
         ),
         new PresetView(
           'Front View',
           [0, 0, -1800],
           [0, 0, 0],
           'left-cube',
-          ClippingSetting.Off
+          ClippingSetting.Off,
         ),
         new PresetView(
           'Top View',
           [0, 900, 900],
           [0, 0, 0],
           'top-cube',
-          ClippingSetting.Off
+          ClippingSetting.Off,
         ),
       ],
       // default view with x, y, z of the camera and then x, y, z of the point it looks at
-      defaultView: [800, 800, 800, 0, 0 ,0],
+      defaultView: [800, 800, 800, 0, 0, 0],
       phoenixMenuRoot: this.phoenixMenuRoot,
-    }
+    };
 
     // Initialize the event display
     this.eventDisplay.init(configuration);
@@ -89,19 +95,20 @@ export class IdeaComponent implements OnInit {
     // directory of the app)
     this.eventDisplay.loadGLTFGeometry(
       // 'assets/detectors/IDEA_' + optionVersion + '.gltf',
-      'https://fccsw.web.cern.ch/fccsw/detectors/IDEA_' + optionVersion + '.gltf',
+      'https://fccsw.web.cern.ch/fccsw/detectors/IDEA_' +
+        optionVersion +
+        '.gltf',
       `IDEA ${optionVersion}`,
       undefined,
       1,
-      true
+      true,
     );
     this.eventDisplay
-        .getLoadingManager()
-        .addProgressListener((progress) => (this.loadingProgress = progress));
+      .getLoadingManager()
+      .addProgressListener((progress) => (this.loadingProgress = progress));
 
     this.eventDisplay
-        .getLoadingManager()
-        .addLoadListenerWithCheck(() => (this.loaded = true));
+      .getLoadingManager()
+      .addLoadListenerWithCheck(() => (this.loaded = true));
   }
-
 }

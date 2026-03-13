@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.scss'],
-  
 })
 export class PlaygroundComponent implements OnInit {
   loaded = false;
@@ -15,8 +14,8 @@ export class PlaygroundComponent implements OnInit {
 
   constructor(
     protected eventDisplay: EventDisplayService,
-    protected http: HttpClient
-  ) { }
+    protected http: HttpClient,
+  ) {}
 
   ngOnInit(): void {
     const configuration: Configuration = {
@@ -36,5 +35,4 @@ export class PlaygroundComponent implements OnInit {
       .getLoadingManager()
       .addLoadListenerWithCheck(() => (this.loaded = true));
   }
-
 }

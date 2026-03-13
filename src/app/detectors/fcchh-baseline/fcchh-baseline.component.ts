@@ -1,26 +1,30 @@
-import { Component,
-         OnInit } from '@angular/core';
-import { EventDisplayService,
-         EventDataFormat,
-         EventDataImportOption } from 'phoenix-ui-components';
-import { Configuration,
-         PhoenixLoader,
-         PresetView,
-         ClippingSetting,
-         PhoenixMenuNode } from 'phoenix-event-display';
+import { Component, OnInit } from '@angular/core';
+import {
+  EventDisplayService,
+  EventDataFormat,
+  EventDataImportOption,
+} from 'phoenix-ui-components';
+import {
+  Configuration,
+  PhoenixLoader,
+  PresetView,
+  ClippingSetting,
+  PhoenixMenuNode,
+} from 'phoenix-event-display';
 
 @Component({
   selector: 'app-fcchh-baseline',
   templateUrl: './fcchh-baseline.component.html',
   styleUrls: ['./fcchh-baseline.component.scss'],
-  
 })
 export class FcchhBaselineComponent implements OnInit {
   events: unknown;
 
   /** The root Phoenix menu node. */
-  phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode('Phoenix Menu',
-                                                         'phoenix-menu');
+  phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode(
+    'Phoenix Menu',
+    'phoenix-menu',
+  );
 
   loaded = false;
   loadingProgress = 0;
@@ -29,7 +33,7 @@ export class FcchhBaselineComponent implements OnInit {
     EventDataFormat.EDM4HEPJSON,
   ];
 
-  constructor(private eventDisplay: EventDisplayService) {};
+  constructor(private eventDisplay: EventDisplayService) {}
 
   ngOnInit(): void {
     // Create the event display configuration
@@ -43,36 +47,36 @@ export class FcchhBaselineComponent implements OnInit {
           'perspective',
           ClippingSetting.On,
           340,
-          120
+          120,
         ),
         new PresetView(
           'Side View',
           [1200, 0, 0],
           [0, 0, 0],
           'right-cube',
-          ClippingSetting.Off
+          ClippingSetting.Off,
         ),
         new PresetView(
           'Front View',
           [0, 0, -1800],
           [0, 0, 0],
           'left-cube',
-          ClippingSetting.Off
+          ClippingSetting.Off,
         ),
         new PresetView(
           'Top View',
           [0, 900, 900],
           [0, 0, 0],
           'top-cube',
-          ClippingSetting.Off
+          ClippingSetting.Off,
         ),
       ],
       // default view with x, y, z of the camera and then x, y, z of the point it looks at
-      defaultView: [1200, 1200, 1200, 0, 0 ,0],
+      defaultView: [1200, 1200, 1200, 0, 0, 0],
       phoenixMenuRoot: this.phoenixMenuRoot,
       // Event data to load by default
       // defaultEventFile: {
-        // (Assuming the file exists in the `src/assets` directory of the app)
+      // (Assuming the file exists in the `src/assets` directory of the app)
       //   eventFile: 'assets/event-data/fcchh-baseline.edm4hep.json',
       //   eventType: 'edm4hep-json'
       // },
@@ -88,16 +92,15 @@ export class FcchhBaselineComponent implements OnInit {
       'FCC-hh',
       undefined,
       1,
-      true
+      true,
     );
 
     this.eventDisplay
-        .getLoadingManager()
-        .addProgressListener((progress) => (this.loadingProgress = progress));
+      .getLoadingManager()
+      .addProgressListener((progress) => (this.loadingProgress = progress));
 
     this.eventDisplay
-        .getLoadingManager()
-        .addLoadListenerWithCheck(() => (this.loaded = true));
+      .getLoadingManager()
+      .addLoadListenerWithCheck(() => (this.loaded = true));
   }
-
 }
