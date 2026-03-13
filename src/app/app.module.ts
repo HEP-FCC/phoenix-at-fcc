@@ -18,7 +18,7 @@ import { AllegroComponent } from './detectors/fccee-allegro/allegro.component';
 // FCC-hh
 import { FcchhBaselineComponent } from './detectors/fcchh-baseline/fcchh-baseline.component';
 
-let routes: Routes = [
+const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'playground', component: PlaygroundComponent },
   { path: 'fccee-cld/:option-version', component: CldComponent },

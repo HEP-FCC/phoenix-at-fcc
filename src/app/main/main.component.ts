@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { EventDisplayService } from 'phoenix-ui-components';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
-  standalone: false
+  
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements AfterViewInit {
   year: number;
 
   constructor(private eventDisplay: EventDisplayService) {
     this.year = new Date().getFullYear();
     this.eventDisplay.getThreeManager().stopAnimationLoop();
-  }
-
-  ngOnInit(): void {
   }
 
   ngAfterViewInit() {

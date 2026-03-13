@@ -2,8 +2,7 @@ import { Component,
          OnInit } from '@angular/core';
 import { EventDisplayService,
          EventDataFormat,
-         EventDataImportOption,
-         ImportOption } from 'phoenix-ui-components';
+         EventDataImportOption } from 'phoenix-ui-components';
 import { Configuration,
          PhoenixLoader,
          PresetView,
@@ -15,10 +14,10 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-cld',
   templateUrl: './cld.component.html',
   styleUrls: ['./cld.component.scss'],
-  standalone: false
+  
 })
 export class CldComponent implements OnInit {
-  events: any;
+  events: unknown;
 
   /** The root Phoenix menu node. */
   phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode('Phoenix Menu',

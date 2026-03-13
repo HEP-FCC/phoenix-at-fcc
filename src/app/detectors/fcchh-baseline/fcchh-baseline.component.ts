@@ -2,8 +2,7 @@ import { Component,
          OnInit } from '@angular/core';
 import { EventDisplayService,
          EventDataFormat,
-         EventDataImportOption,
-         ImportOption } from 'phoenix-ui-components';
+         EventDataImportOption } from 'phoenix-ui-components';
 import { Configuration,
          PhoenixLoader,
          PresetView,
@@ -14,10 +13,10 @@ import { Configuration,
   selector: 'app-fcchh-baseline',
   templateUrl: './fcchh-baseline.component.html',
   styleUrls: ['./fcchh-baseline.component.scss'],
-  standalone: false
+  
 })
 export class FcchhBaselineComponent implements OnInit {
-  events: any;
+  events: unknown;
 
   /** The root Phoenix menu node. */
   phoenixMenuRoot: PhoenixMenuNode = new PhoenixMenuNode('Phoenix Menu',
