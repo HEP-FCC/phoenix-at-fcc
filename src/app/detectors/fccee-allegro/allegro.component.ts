@@ -18,6 +18,7 @@ import { environment } from '../../../environments/environment';
   selector: 'app-allegro',
   templateUrl: './allegro.component.html',
   styleUrls: ['./allegro.component.scss'],
+  standalone: false,
 })
 export class AllegroComponent implements OnInit {
   events: unknown;

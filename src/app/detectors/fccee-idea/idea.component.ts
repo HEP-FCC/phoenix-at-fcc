@@ -18,6 +18,7 @@ import { environment } from '../../../environments/environment';
   selector: 'app-idea',
   templateUrl: './idea.component.html',
   styleUrls: ['./idea.component.scss'],
+  standalone: false,
 })
 export class IdeaComponent implements OnInit {
   events: unknown;

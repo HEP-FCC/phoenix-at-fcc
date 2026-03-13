@@ -18,6 +18,7 @@ import { environment } from '../../../environments/environment';
   selector: 'app-cld',
   templateUrl: './cld.component.html',
   styleUrls: ['./cld.component.scss'],
+  standalone: false,
 })
 export class CldComponent implements OnInit {
   events: unknown;

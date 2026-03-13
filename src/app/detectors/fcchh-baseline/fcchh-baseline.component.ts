@@ -17,6 +17,7 @@ import { environment } from '../../../environments/environment';
   selector: 'app-fcchh-baseline',
   templateUrl: './fcchh-baseline.component.html',
   styleUrls: ['./fcchh-baseline.component.scss'],
+  standalone: false,
 })
 export class FcchhBaselineComponent implements OnInit {
   events: unknown;
