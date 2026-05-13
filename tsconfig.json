@@ -3,10 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {
-      "src/lib/types/edm4hep": ["node_modules/phoenix-event-display/dist/lib/types/edm4hep.js"]
-    },
-    "outDir": "./dist/out-tsc",
+"outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
