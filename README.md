@@ -36,20 +36,44 @@ reload if you change any of the source files.
 In order to have access to the latest development version of phoenix two links
 to the Phoenix sub-packages need to be created:
 
-```
-phoenix-ui-components
-phoenix-event-display
+```json
+"phoenix-ui-components" # Pointing to packages/phoenix-event-display
+"phoenix-event-display" # Pointing to packages/phoenix-ng/projects/phoenix-ui-components"
 ```
 
-easiest way to do have them created is by running the following command from
-the main directory of this application
-
-```sh
-yarn link /absolute/path/to/phoenix --all
-```
 
 Also, do not forget to build phoenix sub-packages, otherwise you will get
 compilation errors.
+
+### Compiling phoenix-ui-components
+
+In packages/phoenix-ng/projects/phoenix-ui-components/package.json you need to modify the exports. The package.json has an exports field for ./theming, which Node.js treats it as strict. And once exports exists, any subpath not listed (including '.') is blocked. This is a workaround for manually liked files and not something that should be commited.
+
+```json
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/fesm2022/phoenix-ui-components.mjs"
+    },
+
+```
+
+To compile the package:
+
+```bash
+yarn install # Don´t forget to install the dependencies
+cd packages/phoenix-ng
+yarn build:ui-components
+```
+
+### Compiling phoenix-event-display
+
+To compile the package:
+
+```bash
+yarn install # Don´t forget to install the dependencies
+cd packages/phoenix-event-display/
+yarn tsc:build
+```
 
 ## Production vs. development version
 
