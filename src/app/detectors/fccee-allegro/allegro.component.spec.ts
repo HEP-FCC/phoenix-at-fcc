@@ -8,8 +8,9 @@ describe('AllegroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AllegroComponent],
-    }).compileComponents();
+      declarations: [ AllegroComponent ]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(AllegroComponent);
     component = fixture.componentInstance;

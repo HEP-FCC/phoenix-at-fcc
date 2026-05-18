@@ -8,8 +8,9 @@ describe('FcchhBaselineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FcchhBaselineComponent],
-    }).compileComponents();
+      declarations: [ FcchhBaselineComponent ]
+    })
+    .compileComponents();
 
     fixture = TestBed.createComponent(FcchhBaselineComponent);
     component = fixture.componentInstance;
