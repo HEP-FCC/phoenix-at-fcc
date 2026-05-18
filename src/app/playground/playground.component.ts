@@ -15,7 +15,7 @@ export class PlaygroundComponent implements OnInit {
 
   constructor(
     protected eventDisplay: EventDisplayService,
-    protected http: HttpClient,
+    protected http: HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -36,5 +36,4 @@ export class PlaygroundComponent implements OnInit {
       .getLoadingManager()
       .addLoadListenerWithCheck(() => (this.loaded = true));
   }
-  
 }
