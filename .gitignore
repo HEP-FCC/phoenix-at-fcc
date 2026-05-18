@@ -48,6 +48,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# glTF files
-src/assets/detectors/*.gltf
