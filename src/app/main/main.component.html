@@ -1,162 +1,184 @@
 <div class="container">
-    <div class="text-center mt-3 mb-5">
-        <img src="assets/images/logo-text.svg"
-             alt="Phoenix@FCC"
-             height="50"
-        />
-        <span style="font-size:50px;vertical-align:middle;">
-        &commat;
-        </span>
-        <img src="assets/images/fcc-logo-animated-dark.png"
-             alt="Phoenix@FCC" />
-        <p class="lead">Visualizing FCC events in the browser.</p>
+  <div class="text-center mt-3 mb-5">
+    <img src="assets/images/logo-text.svg" alt="Phoenix@FCC" height="50" />
+    <span style="font-size: 50px; vertical-align: middle"> &commat; </span>
+    <img src="assets/images/fcc-logo-animated-dark.png" alt="Phoenix@FCC" />
+    <p class="lead">Visualizing FCC events in the browser.</p>
+  </div>
+
+  <div class="row centered">
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="assets/images/0_ALLEGRO_logo_Original_crop_v1.svg"
+        alt="FCC-ee Noble Liquid based detector concept"
+      />
+      <div class="card-body d-flex flex-column text-center">
+        <h5 class="card-title">ALLEGRO</h5>
+        <p class="card-text">o1_v03</p>
+        <p class="card-text">
+          Explore events in the FCC-ee ALLEGRO detector concept.
+        </p>
+        <small class="mt-1 mb-3">
+          <p class="card-text">
+            <a
+              [href]="envPath + 'detectors/rootjs.html?file=ALLEGRO_o1_v03.root&item=default'"
+              class="text-decoration-none"
+              >Detailed detector visualization</a
+            >
+          </p>
+        </small>
+        <a routerLink="/fccee-allegro/o1_v03" class="btn btn-primary">Show</a>
+      </div>
     </div>
 
-    <div class="row centered">
-        <div class="card">
-          <img
-            class="card-img-top"
-            src="assets/images/0_ALLEGRO_logo_Original_crop_v1.svg"
-            alt="FCC-ee Noble Liquid based detector concept"
-          />
-          <div class="card-body d-flex flex-column text-center">
-            <h5 class="card-title">ALLEGRO</h5>
-            <p class="card-text">o1_v03</p>
-            <p class="card-text">Explore events in the FCC-ee ALLEGRO detector concept.</p>
-            <small class="mt-1 mb-3">
-            <p class="card-text">
-              <a href="https://fccsw.web.cern.ch/fccsw/detectors/rootjs.html?file=ALLEGRO_o1_v03.root&item=default"
-                 class="text-decoration-none">Detailed detector visualization</a>
-            </p>
-            </small>
-            <a routerLink="/fccee-allegro/o1_v03" class="btn btn-primary">Show</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            class="card-img-top"
-            src="assets/images/cld_logo_transparent.png"
-            alt="CLD Logo"
-          />
-          <div class="card-body d-flex flex-column text-center">
-            <h5 class="card-title">CLD</h5>
-            <p class="card-text">o2_v07</p>
-            <p class="card-text">Explore events in the FCC-ee CLD detector concept.</p>
-            <small class="mt-1 mb-3">
-            <p class="card-text">
-              <a href="https://fccsw.web.cern.ch/fccsw/detectors/rootjs.html?file=CLD_o2_v07.root&item=default"
-                 class="text-decoration-none">Detailed detector visualization</a>
-            </p>
-            </small>
-            <a routerLink="/fccee-cld/o2_v07" class="btn btn-primary">Show</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            class="card-img-top"
-            src="assets/images/cld_logo_transparent.png"
-            alt="CLD Logo"
-          />
-          <div class="card-body d-flex flex-column text-center">
-            <h5 class="card-title">CLD</h5>
-            <p class="card-text">o3_v01</p>
-            <p class="card-text">Explore events in the FCC-ee CLD detector concept.</p>
-            <small class="mt-1 mb-3">
-            <p class="card-text">
-              <a href="https://fccsw.web.cern.ch/fccsw/detectors/rootjs.html?file=CLD_o3_v01.root&item=default"
-                 class="text-decoration-none">Detailed detector visualization</a>
-            </p>
-            </small>
-            <a routerLink="/fccee-cld/o3_v01" class="btn btn-primary">Show</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            class="card-img-top"
-            src="assets/images/cld_logo_transparent.png"
-            alt="CLD Logo"
-          />
-          <div class="card-body d-flex flex-column text-center">
-            <h5 class="card-title">CLD</h5>
-            <p class="card-text">o4_v05</p>
-            <p class="card-text">Explore events in the FCC-ee CLD detector concept.</p>
-            <small class="mt-1 mb-3">
-            <p class="card-text">
-              <a href="https://fccsw.web.cern.ch/fccsw/detectors/rootjs.html?file=CLD_o4_v05.root&item=default"
-                 class="text-decoration-none">Detailed detector visualization</a>
-            </p>
-            </small>
-            <a routerLink="/fccee-cld/o4_v05" class="btn btn-primary">Show</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            class="card-img-top"
-            src="assets/images/idea_logo_transparent.png"
-            alt="FCC-ee IDEA"
-          />
-          <div class="card-body d-flex flex-column text-center">
-            <h5 class="card-title">IDEA</h5>
-            <p class="card-text">o1_v03</p>
-            <p class="card-text">Explore events in the FCC-ee IDEA detector concept.</p>
-            <small class="mt-1 mb-3">
-            <p class="card-text">
-              <a href="https://fccsw.web.cern.ch/fccsw/detectors/rootjs.html?file=IDEA_o1_v03.root&item=default"
-                 class="text-decoration-none">Detailed detector visualization</a>
-            </p>
-            </small>
-            <a routerLink="/fccee-idea/o1_v03" class="btn btn-primary">Show</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            class="card-img-top"
-            src="assets/images/fcchh_baseline_logo_transparent.png"
-            alt="FCC-hh Baseline"
-          />
-          <div class="card-body d-flex flex-column text-center">
-            <h5 class="card-title">FCC-hh Baseline</h5>
-            <p class="card-text">Explore events in the FCC-hh Baseline detector concept.</p>
-            <small class="mt-1 mb-3">
-            <p class="card-text">
-              <a href="https://fccsw.web.cern.ch/fccsw/detectors/rootjs.html?file=fcchh_baseline.root&item=default"
-                 class="text-decoration-none">Detailed detector visualization</a>
-            </p>
-            </small>
-            <a routerLink="/fcchh-baseline" class="btn btn-primary">Show</a>
-          </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top"
-                 src="assets/images/playground.svg"
-                 alt="Card image cap"
-            />
-            <div class="card-body d-flex flex-column text-center">
-                <h5 class="card-title">Playground</h5>
-                <p class="card-text">
-                  Load your own detector geometry.
-                </p>
-                <a routerLink="/playground" class="btn btn-primary">Show</a>
-            </div>
-        </div>
-
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="assets/images/cld_logo_transparent.png"
+        alt="CLD Logo"
+      />
+      <div class="card-body d-flex flex-column text-center">
+        <h5 class="card-title">CLD</h5>
+        <p class="card-text">o2_v07</p>
+        <p class="card-text">
+          Explore events in the FCC-ee CLD detector concept.
+        </p>
+        <small class="mt-1 mb-3">
+          <p class="card-text">
+            <a
+              [href]="envPath + 'detectors/rootjs.html?file=CLD_o2_v07.root&item=default'"
+              class="text-decoration-none"
+              >Detailed detector visualization</a
+            >
+          </p>
+        </small>
+        <a routerLink="/fccee-cld/o2_v07" class="btn btn-primary">Show</a>
+      </div>
     </div>
+
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="assets/images/cld_logo_transparent.png"
+        alt="CLD Logo"
+      />
+      <div class="card-body d-flex flex-column text-center">
+        <h5 class="card-title">CLD</h5>
+        <p class="card-text">o3_v01</p>
+        <p class="card-text">
+          Explore events in the FCC-ee CLD detector concept.
+        </p>
+        <small class="mt-1 mb-3">
+          <p class="card-text">
+            <a
+              [href]="envPath + 'detectors/rootjs.html?file=CLD_o3_v01.root&item=default'"
+              class="text-decoration-none"
+              >Detailed detector visualization</a
+            >
+          </p>
+        </small>
+        <a routerLink="/fccee-cld/o3_v01" class="btn btn-primary">Show</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="assets/images/cld_logo_transparent.png"
+        alt="CLD Logo"
+      />
+      <div class="card-body d-flex flex-column text-center">
+        <h5 class="card-title">CLD</h5>
+        <p class="card-text">o4_v05</p>
+        <p class="card-text">
+          Explore events in the FCC-ee CLD detector concept.
+        </p>
+        <small class="mt-1 mb-3">
+          <p class="card-text">
+            <a
+              [href]="envPath + 'detectors/rootjs.html?file=CLD_o4_v05.root&item=default'"
+              class="text-decoration-none"
+              >Detailed detector visualization</a
+            >
+          </p>
+        </small>
+        <a routerLink="/fccee-cld/o4_v05" class="btn btn-primary">Show</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="assets/images/idea_logo_transparent.png"
+        alt="FCC-ee IDEA"
+      />
+      <div class="card-body d-flex flex-column text-center">
+        <h5 class="card-title">IDEA</h5>
+        <p class="card-text">o1_v03</p>
+        <p class="card-text">
+          Explore events in the FCC-ee IDEA detector concept.
+        </p>
+        <small class="mt-1 mb-3">
+          <p class="card-text">
+            <a
+              [href]="envPath + 'detectors/rootjs.html?file=IDEA_o1_v03.root&item=default'"
+              class="text-decoration-none"
+              >Detailed detector visualization</a
+            >
+          </p>
+        </small>
+        <a routerLink="/fccee-idea/o1_v03" class="btn btn-primary">Show</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="assets/images/fcchh_baseline_logo_transparent.png"
+        alt="FCC-hh Baseline"
+      />
+      <div class="card-body d-flex flex-column text-center">
+        <h5 class="card-title">FCC-hh Baseline</h5>
+        <p class="card-text">
+          Explore events in the FCC-hh Baseline detector concept.
+        </p>
+        <small class="mt-1 mb-3">
+          <p class="card-text">
+            <a
+              [href]="envPath + 'detectors/rootjs.html?file=fcchh_baseline.root&item=default'"
+              class="text-decoration-none"
+              >Detailed detector visualization</a
+            >
+          </p>
+        </small>
+        <a routerLink="/fcchh-baseline" class="btn btn-primary">Show</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="assets/images/playground.svg"
+        alt="Card image cap"
+      />
+      <div class="card-body d-flex flex-column text-center">
+        <h5 class="card-title">Playground</h5>
+        <p class="card-text">Load your own detector geometry.</p>
+        <a routerLink="/playground" class="btn btn-primary">Show</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer>
+  <p>Build with <a href="https://github.com/HSF/phoenix">Phoenix</a>.</p>
   <p>
-    Build with <a href="https://github.com/HSF/phoenix">Phoenix</a>.
+    Report bugs to
+    <a href="https://github.com/HEP-FCC/phoenix-at-fcc/issues"
+      >Phoenix&commat;FCC</a
+    >
+    GitHub <a href="https://github.com/HEP-FCC/phoenix-at-fcc">repository</a>.
   </p>
-  <p>
-    Report bugs to <a href="https://github.com/HEP-FCC/phoenix-at-fcc/issues">Phoenix&commat;FCC</a> GitHub <a href="https://github.com/HEP-FCC/phoenix-at-fcc">repository</a>.
-  </p>
-  <p>
-    &copy; {{ year }} CERN
-  </p>
+  <p>&copy; {{ year }} CERN</p>
 </footer>

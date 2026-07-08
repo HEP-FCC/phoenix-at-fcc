@@ -10,7 +10,8 @@
     "deploy:prod": "rsync -avh --delete dist/phoenix-at-fcc/ lxplus:/eos/project-f/fccsw-web/www/phoenix/",
     "deploy:dev": "rsync -avh --delete dist/phoenix-at-fcc/ lxplus:/eos/project-f/fccsw-web/www/phoenix-dev/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -30,19 +31,27 @@
     "zone.js": "^0.15.0"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "19",
     "@angular-devkit/build-angular": "^19.2.13",
+    "@angular-eslint/builder": "19.8.1",
     "@angular/cli": "~19.2.13",
     "@angular/compiler-cli": "^19.2.12",
+    "@eslint/js": "^9.28.0",
     "@types/dat.gui": "^0.7.7",
     "@types/jasmine": "~4.0.0",
     "@types/three": "^0.162.0",
+    "angular-eslint": "19.8.1",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.8",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~5.5.4"
+    "prettier": "3.8.1",
+    "typescript": "~5.5.4",
+    "typescript-eslint": "8.33.1"
   },
   "packageManager": "yarn@3.6.0"
 }

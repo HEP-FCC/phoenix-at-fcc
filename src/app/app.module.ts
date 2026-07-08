@@ -18,14 +18,14 @@ import { AllegroComponent } from './detectors/fccee-allegro/allegro.component';
 // FCC-hh
 import { FcchhBaselineComponent } from './detectors/fcchh-baseline/fcchh-baseline.component';
 
-let routes: Routes = [
+const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'playground', component: PlaygroundComponent },
   { path: 'fccee-cld/:option-version', component: CldComponent },
   { path: 'fccee-idea/:option-version', component: IdeaComponent },
   { path: 'fccee-allegro/:option-version', component: AllegroComponent },
-  { path: 'fcchh-baseline', component: FcchhBaselineComponent }
-]
+  { path: 'fcchh-baseline', component: FcchhBaselineComponent },
+];
 
 @NgModule({
   declarations: [
@@ -35,14 +35,14 @@ let routes: Routes = [
     IdeaComponent,
     AllegroComponent,
     FcchhBaselineComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     PhoenixUIModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],
