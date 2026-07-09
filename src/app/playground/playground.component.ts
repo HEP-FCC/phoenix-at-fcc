@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { EventDisplayService } from 'phoenix-ui-components';
 import { Configuration, PresetView } from 'phoenix-event-display';
 import { HttpClient } from '@angular/common/http';
@@ -10,13 +10,11 @@ import { HttpClient } from '@angular/common/http';
   standalone: false
 })
 export class PlaygroundComponent implements OnInit {
+  protected eventDisplay = inject(EventDisplayService);
+  protected http = inject(HttpClient);
+
   loaded = false;
   loadingProgress = 0;
-
-  constructor(
-    protected eventDisplay: EventDisplayService,
-    protected http: HttpClient
-  ) { }
 
   ngOnInit(): void {
     const configuration: Configuration = {

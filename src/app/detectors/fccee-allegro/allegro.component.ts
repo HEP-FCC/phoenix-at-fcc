@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   EventDisplayService,
   EventDataFormat,
@@ -21,6 +21,9 @@ import { environment } from '../../../environments/environment';
   standalone: false,
 })
 export class AllegroComponent implements OnInit {
+  private eventDisplay = inject(EventDisplayService);
+  private route = inject(ActivatedRoute);
+
   events: unknown;
 
   /** The root Phoenix menu node. */
@@ -35,11 +38,6 @@ export class AllegroComponent implements OnInit {
   eventDataImportOptions: EventDataImportOption[] = [
     EventDataFormat.EDM4HEPJSON,
   ];
-
-  constructor(
-    private eventDisplay: EventDisplayService,
-    private route: ActivatedRoute,
-  ) {}
 
   ngOnInit(): void {
     let optionVersion;

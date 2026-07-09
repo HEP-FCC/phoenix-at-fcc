@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 import { PlaygroundComponent } from './playground.component';
 
@@ -8,7 +10,8 @@ describe('PlaygroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlaygroundComponent ]
+      declarations: [ PlaygroundComponent ],
+      providers: [ provideHttpClient(), provideHttpClientTesting() ],
     })
     .compileComponents();
 
