@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-playground',
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.scss'],
-  standalone: false
+  standalone: false,
 })
 export class PlaygroundComponent implements OnInit {
   protected eventDisplay = inject(EventDisplayService);
@@ -34,5 +34,4 @@ export class PlaygroundComponent implements OnInit {
       .getLoadingManager()
       .addLoadListenerWithCheck(() => (this.loaded = true));
   }
-  
 }

@@ -11,11 +11,10 @@ describe('AllegroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ AllegroComponent ],
-      providers: [ provideHttpClient(), provideHttpClientTesting() ],
-    })
-    .compileComponents();
+      imports: [RouterTestingModule],
+      declarations: [AllegroComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AllegroComponent);
     component = fixture.componentInstance;
