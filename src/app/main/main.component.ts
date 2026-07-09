@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, inject } from '@angular/core';
 import { EventDisplayService } from 'phoenix-ui-components';
 import { environment } from '../../environments/environment';
 
@@ -9,10 +9,12 @@ import { environment } from '../../environments/environment';
   standalone: false,
 })
 export class MainComponent implements AfterViewInit {
+  private eventDisplay = inject(EventDisplayService);
+
   year: number;
   envPath = environment.path;
 
-  constructor(private eventDisplay: EventDisplayService) {
+  constructor() {
     this.year = new Date().getFullYear();
     this.eventDisplay.getThreeManager().stopAnimationLoop();
   }

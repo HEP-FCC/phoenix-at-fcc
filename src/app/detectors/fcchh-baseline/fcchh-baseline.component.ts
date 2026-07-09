@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import {
   EventDisplayService,
   EventDataFormat,
@@ -20,6 +20,8 @@ import { environment } from '../../../environments/environment';
   standalone: false,
 })
 export class FcchhBaselineComponent implements OnInit {
+  private eventDisplay = inject(EventDisplayService);
+
   events: unknown;
 
   /** The root Phoenix menu node. */
@@ -34,8 +36,6 @@ export class FcchhBaselineComponent implements OnInit {
   eventDataImportOptions: EventDataImportOption[] = [
     EventDataFormat.EDM4HEPJSON,
   ];
-
-  constructor(private eventDisplay: EventDisplayService) {}
 
   ngOnInit(): void {
     // Create the event display configuration
