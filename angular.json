@@ -7,7 +7,6 @@
       "enabled": false
     },
     "analytics": false,
-    "packageManager": "npm",
     "schematicCollections": ["angular-eslint"]
   },
   "projects": {
@@ -35,7 +34,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "preserveSymlinks": true,
-            "externalDependencies": ["jsdom", "@resvg/resvg-js", "@resvg/resvg-js-linux-x64-gnu"],
+            "externalDependencies": [
+              "jsdom",
+              "@resvg/resvg-js",
+              "@resvg/resvg-js-linux-x64-gnu"
+            ],
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": []
