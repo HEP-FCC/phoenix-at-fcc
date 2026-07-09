@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages as prod
 
 on:
   release:
@@ -19,9 +19,12 @@ jobs:
           node-version: 20
       - run: yarn install --immutable
       - run: yarn build:prod
+      - run: |
+          mkdir -p pages/prod
+          cp -r dist/phoenix-at-fcc/. pages/prod/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/phoenix-at-fcc
+          path: pages
 
   deploy:
     needs: build
