@@ -6,7 +6,8 @@
     "serve": "ng serve",
     "watch": "ng build --watch --configuration development",
     "build": "ng build",
-    "build:prod": "ng build --base-href /phoenix-at-fcc/",
+    "build:prod": "ng build --base-href /phoenix-at-fcc/prod/",
+    "build:dev": "ng build --base-href /phoenix-at-fcc/dev/",
     "typecheck": "tsc --noEmit",
     "lint": "ng lint",
     "test": "ng test"
