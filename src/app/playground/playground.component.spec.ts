@@ -10,10 +10,9 @@ describe('PlaygroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlaygroundComponent ],
-      providers: [ provideHttpClient(), provideHttpClientTesting() ],
-    })
-    .compileComponents();
+      declarations: [PlaygroundComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PlaygroundComponent);
     component = fixture.componentInstance;

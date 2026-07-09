@@ -11,11 +11,10 @@ describe('IdeaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ IdeaComponent ],
-      providers: [ provideHttpClient(), provideHttpClientTesting() ],
-    })
-    .compileComponents();
+      imports: [RouterTestingModule],
+      declarations: [IdeaComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(IdeaComponent);
     component = fixture.componentInstance;

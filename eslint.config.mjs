@@ -2,6 +2,7 @@ import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import angular from "angular-eslint";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
+import prettierPlugin from "eslint-plugin-prettier";
 
 export default tseslint.config(
   {
@@ -14,7 +15,11 @@ export default tseslint.config(
       eslintConfigPrettier,
     ],
     processor: angular.processInlineTemplates,
+    plugins: {
+      prettier: prettierPlugin,
+    },
     rules: {
+      "prettier/prettier": "error",
       "@angular-eslint/prefer-standalone": "off",
       "@angular-eslint/directive-selector": [
         "error",
