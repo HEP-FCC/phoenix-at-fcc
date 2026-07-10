@@ -6,11 +6,10 @@ on:
   workflow_dispatch:
 
 permissions:
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -19,19 +18,9 @@ jobs:
           node-version: 20
       - run: yarn install --immutable
       - run: yarn build:prod
-      - run: |
-          mkdir -p pages/prod
-          cp -r dist/phoenix-at-fcc/. pages/prod/
-      - uses: actions/upload-pages-artifact@v3
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: pages
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          folder: dist/phoenix-at-fcc
+          target-folder: prod
+          clean-exclude: |
+            dev
