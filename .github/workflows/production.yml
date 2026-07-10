@@ -21,6 +21,5 @@ jobs:
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/phoenix-at-fcc
-          target-folder: prod
           clean-exclude: |
             dev
