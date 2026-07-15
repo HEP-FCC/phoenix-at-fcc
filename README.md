@@ -77,10 +77,8 @@ yarn tsc:build
 
 ## Production vs. development version
 
-- Production version is available from the main page of [FCCSW website][fccsw]
-  ([direct link][produrl]) and corresponds to the latest tagged version.
-- The `main` branch holds the latest development version available from
-  [here][develurl].
+- Production version is available from [GitHub page][produrl] and corresponds to the latest tagged version.
+- The `main` branch holds the latest development version available from [here][develurl].
 
 ## Deploying to the FCCSW website
 
@@ -100,6 +98,5 @@ yarn build:dev
 yarn deploy:dev
 ```
 
-[fccsw]: https://fccsw.web.cern.ch/fccsw/
-[produrl]: https://fccsw.web.cern.ch/fccsw/phoenix/
-[develurl]: https://fccsw.web.cern.ch/fccsw/phoenix-dev/
+[produrl]: https://hep-fcc.github.io/phoenix-at-fcc/
+[develurl]: https://hep-fcc.github.io/phoenix-at-fcc/dev
