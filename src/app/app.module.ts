@@ -42,7 +42,7 @@ const routes: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     PhoenixUIModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
   providers: [],
   bootstrap: [AppComponent],
