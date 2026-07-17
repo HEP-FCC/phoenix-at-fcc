@@ -75,12 +75,6 @@ export class FcchhBaselineComponent implements OnInit {
       // default view with x, y, z of the camera and then x, y, z of the point it looks at
       defaultView: [1200, 1200, 1200, 0, 0, 0],
       phoenixMenuRoot: this.phoenixMenuRoot,
-      // Event data to load by default
-      // defaultEventFile: {
-      // (Assuming the file exists in the `src/assets` directory of the app)
-      //   eventFile: 'assets/event-data/fcchh-baseline.edm4hep.json',
-      //   eventType: 'edm4hep-json'
-      // },
     };
 
     // Initialize the event display

@@ -1,8 +1,0 @@
-[
-  {
-    "context": ["/assets/detectors", "/assets/event-data"],
-    "target": "https://fccsw.web.cern.ch/fccsw/phoenix",
-    "secure": true,
-    "changeOrigin": true
-  }
-]

@@ -85,12 +85,6 @@ export class CldComponent implements OnInit {
       // default view with x, y, z of the camera and then x, y, z of the point it looks at
       defaultView: [800, 800, 800, 0, 0, 0],
       phoenixMenuRoot: this.phoenixMenuRoot,
-      // Event data to load by default
-      // defaultEventFile: {
-      // (Assuming the file exists in the `src/assets` directory of the app)
-      //   eventFile: 'assets/event-data/cld.edm4hep.json',
-      //   eventType: 'edm4hep-json'
-      // },
     };
 
     // Initialize the event display
