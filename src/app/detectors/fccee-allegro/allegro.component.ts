@@ -86,12 +86,6 @@ export class AllegroComponent implements OnInit {
       // it looks at
       defaultView: [800, 800, 800, 0, 0, 0],
       phoenixMenuRoot: this.phoenixMenuRoot,
-      // Event data to load by default
-      // defaultEventFile: {
-      // (Assuming the file exists in the `src/assets` directory of the app)
-      //   eventFile: 'assets/event-data/allegro.edm4hep.json',
-      //   eventType: 'edm4hep-json'
-      // },
     };
 
     // Initialize the event display
