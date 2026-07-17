@@ -12,7 +12,6 @@ import {
   PhoenixMenuNode,
 } from 'phoenix-event-display';
 import { ActivatedRoute } from '@angular/router';
-import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-cld',
@@ -99,7 +98,7 @@ export class CldComponent implements OnInit {
 
     // Load detector geometry (assuming the file exists in the `src/assets` directory of the app)
     this.eventDisplay.loadGLTFGeometry(
-      environment.path + 'detectors/CLD_' + optionVersion + '.gltf',
+      'assets/detectors/CLD_' + optionVersion + '.gltf',
       'CLD',
       undefined,
       1,

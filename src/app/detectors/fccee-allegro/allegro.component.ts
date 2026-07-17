@@ -12,7 +12,6 @@ import {
   PhoenixMenuNode,
 } from 'phoenix-event-display';
 import { ActivatedRoute } from '@angular/router';
-import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-allegro',
@@ -100,7 +99,7 @@ export class AllegroComponent implements OnInit {
 
     // Load latest detector geometry from the FCCSW wesite
     this.eventDisplay.loadGLTFGeometry(
-      environment.path + 'detectors/ALLEGRO_' + optionVersion + '.gltf',
+      'assets/detectors/ALLEGRO_' + optionVersion + '.gltf',
       'ALLEGRO',
       undefined,
       1,
