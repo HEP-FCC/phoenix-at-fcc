@@ -15,6 +15,7 @@ import { RouterModule, type Routes } from '@angular/router';
 import { CldComponent } from './detectors/fccee-cld/cld.component';
 import { IdeaComponent } from './detectors/fccee-idea/idea.component';
 import { AllegroComponent } from './detectors/fccee-allegro/allegro.component';
+import { IldComponent } from './detectors/fccee-ild/ild.component';
 // FCC-hh
 import { FcchhBaselineComponent } from './detectors/fcchh-baseline/fcchh-baseline.component';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'fccee-cld/:option-version', component: CldComponent },
   { path: 'fccee-idea/:option-version', component: IdeaComponent },
   { path: 'fccee-allegro/:option-version', component: AllegroComponent },
+  { path: 'fccee-ild', component: IldComponent },
   { path: 'fcchh-baseline', component: FcchhBaselineComponent },
 ];
 
@@ -34,6 +36,7 @@ const routes: Routes = [
     CldComponent,
     IdeaComponent,
     AllegroComponent,
+    IldComponent,
     FcchhBaselineComponent,
     PlaygroundComponent,
   ],

@@ -44,7 +44,7 @@ export class IdeaComponent implements OnInit {
       optionVersion = params['option-version'];
     });
     if (optionVersion === undefined) {
-      optionVersion = 'o1_v03';
+      optionVersion = 'o1_v04';
     }
 
     // Create the event display configuration
