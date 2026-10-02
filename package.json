@@ -1,6 +1,6 @@
 {
   "name": "phoenix-at-fcc",
-  "version": "0.2.2",
+  "version": "0.3.7",
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
